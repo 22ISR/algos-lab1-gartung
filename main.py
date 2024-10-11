@@ -11,7 +11,7 @@
 hint: что такое print?
 """
 
-# Замените это своим кодом
+# print("Hello world")
 
 """
  _____         _      _____ 
@@ -26,8 +26,19 @@ hint: что такое print?
 
 hint: цикл, если и "%"
 """
+# запрос числа у пользователя
+# n = int(input("Введите число: "))
 
-# Замените это своим кодом
+# проход по всем числам от 1 до n
+# for i in range(1, n + 1):
+   # if i % 3 == 0 and i % 5 == 0:
+    #    print("FizzBuzz")
+    # elif i % 3 == 0:
+     #   print("Fizz")
+    # elif i % 5 == 0:
+       # print("Buzz")
+    # else:
+     #   print(i)
 
 """
  _____         _      _____ 
@@ -42,7 +53,19 @@ hint: цикл, если и "%"
 hint: https://ru.wikihow.com/%D0%B2%D1%8B%D1%81%D1%87%D0%B8%D1%82%D1%8B%D0%B2%D0%B0%D1%82%D1%8C-%D0%B2%D0%B8%D1%81%D0%BE%D0%BA%D0%BE%D1%81%D0%BD%D1%8B%D0%B5-%D0%B3%D0%BE%D0%B4%D1%8B
 """
 
-# Замените это своим кодом
+# def is_leap_year(year):
+    # год является високосным, если:
+    # 1. он делится на 4.
+    # 2. но не делится на 100, если только он не делится на 400.
+ #   return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
+
+# запрашиваем у пользователя ввод года
+#year_input = int(input("Введите год: "))
+
+#if is_leap_year(year_input):
+ #   print(f"{year_input} является високосным годом.")
+#else:
+ #   print(f"{year_input} не является високосным годом.")
 
 """
  _____         _        ___ 
@@ -57,7 +80,20 @@ hint: https://ru.wikihow.com/%D0%B2%D1%8B%D1%81%D1%87%D0%B8%D1%82%D1%8B%D0%B2%D0
 hint: https://letpy.com/handbook/builtins/reversed/
 """
 
-# Замените это своим кодом
+#def is_palindrome(value):
+    # приводим к строке и удаляем пробелы
+ #   value_str = str(value).replace(" ", "").lower()
+    # сравниваем строку с её обратной версией
+ #   return value_str == value_str[::-1]
+
+# запрашиваем ввод у пользователя
+#user_input = input("Введите строку или число: ")
+
+# проверяем, является ли ввод палиндромом
+ # if is_palindrome(user_input):
+ #   print("Это палиндром!")
+# else:
+ #   print("Это не палиндром.")
 
 """
  _____         _      _____ 
@@ -71,8 +107,17 @@ hint: https://letpy.com/handbook/builtins/reversed/
 
 hint: https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%B0%D0%BB
 """
+# с помощью цикла
+# def factorial_iterative(n):
+ #   if n < 0:
+  #      return "факториал не определен для отрицательных чисел."
+  #  result = 1
+  #  for i in range(1, n + 1):
+  #      result *= i
+  #  return result
 
-# Замените это своим кодом
+# number = int(input("введите число для вычисления факториала: "))
+# print(f"факториал числа {number} равен {factorial_iterative(number)}")
 
 """
  _____         _       ____ 
@@ -88,7 +133,21 @@ hint: x <= 1 - не простые числа
 hint 2: %
 """
 
-# Замените это своим кодом
+#def is_prime(n):
+    # проверяем числа меньше или равные 1
+   # if n <= 1:
+    #    return False
+    # проверяем делители от 2 до квадратного корня из n
+  #  for i in range(2, int(n**0.5) + 1):
+   #     if n % i == 0:
+    #        return False
+   # return True
+
+# number = int(input("введите число для проверки на простоту: "))
+# if is_prime(number):
+ #   print(f"число {number} является простым.")
+# else:
+ #   print(f"число {number} не является простым.")
 
 """
  _____         _      ______
@@ -103,7 +162,13 @@ hint 2: %
 hint: циклы
 """
 
-# Замените это своим кодом
+#n = int(input("введите число:"))
+#tot = 0
+# while(n > 0):
+  #  dig = n % 10
+  #  tot = tot + dig
+ #   n = n//10
+# print("сумма цифр равна:", tot)
 
 """
  _____         _      _____ 
@@ -118,8 +183,39 @@ hint: циклы
 hint: 1, 1, 2, 3 https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D0%BB%D0%B0_%D0%A4%D0%B8%D0%B1%D0%BE%D0%BD%D0%B0%D1%87%D1%87%D0%B8
 hint 2: попробуйте решить с помощью рекурсии
 """
+# до указанного числа с использованием рекурсии
+#def fibonacci(n, sequence=None):
+ #   if sequence is None:
+ #       sequence = []
 
-# Замените это своим кодом
+    # базовые случаи
+ #   if n < 0:
+ #       return sequence
+#    elif n == 0:
+  #      sequence.append(0)
+  #  elif n == 1:
+ #       sequence.extend([0, 1])
+ #   else:
+ #       # проверяем, если текущий элемент уже есть в последовательности
+ #       if len(sequence) < 2:
+ #           fibonacci(n - 1, sequence)
+        # добавляем следующий элемент последовательности
+  #      next_fib = sequence[-1] + sequence[-2]
+ #       if next_fib <= n:
+ #           sequence.append(next_fib)
+ #           fibonacci(next_fib, sequence)
+
+ #   return sequence
+
+# основной блок программы
+# max_value = int(input("введите максимальное значение: "))
+# result = fibonacci(max_value)
+
+# print("последовательность Фибоначчи до", max_value, ":", result)
+
+
+
+
 
 
 
